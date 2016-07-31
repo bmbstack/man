@@ -1,3 +1,12 @@
 {
-  "presets": ["es2015", "stage-0"]
+  "presets": ["es2015", "stage-0"],
+  "env": {
+    "production": {
+      "plugins": [
+        "babel-plugin-transform-remove-console",
+        "babel-plugin-transform-remove-debugger",
+        "babel-plugin-dev-expression"
+      ]
+    }
+  }
 }

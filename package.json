@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm test",
     "lint": "eslint app test *.js",
-    "start": "node -r babel-register main.js 9595"
+    "start:dev": "cross-env NODE_ENV=development node debug -r babel-register main.js 9595",
+    "start": "cross-env NODE_ENV=production node -r babel-register main.js 9595"
   },
   "repository": {
     "type": "git",
